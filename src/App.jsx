@@ -12,6 +12,7 @@ const App = () => {
   };
   const bbb = {
     color: "blue",
+    border: "1px solid #aaa",
     textDecoration: "line-through"
   };
 

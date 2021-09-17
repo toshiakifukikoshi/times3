@@ -1,4 +1,5 @@
 import React from "react";
+import ColorfullMessage from "./components/ColorfullMessage";
 
 const App = () => {
   const onCLickButton = () => {
@@ -20,6 +21,8 @@ const App = () => {
     <>
       <h1 style={aaa}>こんばんは</h1>
       <p style={bbb}>吹越俊明</p>
+      <ColorfullMessage color="green" message="こちらは変更できますか" />
+      <ColorfullMessage color="red" message="アイフォン買うぞ"　font-size="1.3em">
       <button onClick={onCLickButton}>ボタン</button>
     </>
   );

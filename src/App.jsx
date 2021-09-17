@@ -21,8 +21,15 @@ const App = () => {
     <>
       <h1 style={aaa}>こんばんは</h1>
       <p style={bbb}>吹越俊明</p>
-      <ColorfullMessage color="green" message="こちらは変更できますか" />
-      <ColorfullMessage color="red" message="アイフォン買うぞ"　font-size="1.3em">
+      <ColorfullMessage color="green">こちらは変更できますか</ColorfullMessage>
+      <ColorfullMessage color="red">アイフォン買うぞ</ColorfullMessage>
+      <ColorfullMessage color="green" fontSize="1.8em">
+        午後九時から始まるぞ
+      </ColorfullMessage>
+      <ColorfullMessage color="purple">初めまして吹越俊明です</ColorfullMessage>
+      <ColorfullMessage>
+        何も変化がなくてもここにテキストを書くだけでいいんです
+      </ColorfullMessage>
       <button onClick={onCLickButton}>ボタン</button>
     </>
   );

@@ -1,20 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const ColofulMessage = (props) => {
-  console.log(props);
-  
+  const { color, fontSize, children } = props;
   const ccc = {
-    color:props.color,
-    border:'3px solid #ddd',
-    fontSize: props.fontSize
-  }
+    color,
+    border: "3px solid #ddd",
+    fontSize
+  };
 
-  return(
-    <p style={ccc}>{props.message}</p>
-    <p style={ccc}>{props.message}</p>
-    )
-
- 
-}
+  return <p style={ccc}>{children}</p>;
+};
 
 export default ColofulMessage;

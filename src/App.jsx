@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import ColorfullMessage from "./components/ColorfullMessage";
 
 const App = () => {
-  useState();
-  const onCLickButton = () => {
-    alert();
-  };
+  const [num, setNum] = useState(0);
 
+  const countUp = () => {
+    const number = Math.floor(Math.random() * 10);
+    if (number > 5) {
+      setNum("すごいですね");
+    } else {
+      setNum("残念です");
+    }
+  };
   const aaa = {
     color: "red",
     fontSize: "2.8em",
@@ -31,7 +36,10 @@ const App = () => {
       <ColorfullMessage>
         何も変化がなくてもここにテキストを書くだけでいいんです
       </ColorfullMessage>
-      <button onClick={onCLickButton}>ボタン</button>
+      <ColorfullMessage color="pink">吹越礼子</ColorfullMessage>
+      <button onClick={countUp}>ボタン</button>
+      <p>{num}</p>
+      <p>(^^)/</p>
     </>
   );
 };

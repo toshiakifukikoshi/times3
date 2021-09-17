@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ColorfullMessage from "./components/ColorfullMessage";
 
 const App = () => {
+  useState();
   const onCLickButton = () => {
     alert();
   };

@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import ColorfullMessage from "./components/ColorfullMessage";
 
 const App = () => {
+  console.log("最初");
   const [num, setNum] = useState(0);
+  const [faceShowFlag, setFaceShowFlag] = useState(true);
 
   const countUp = () => {
-    const number = Math.floor(Math.random() * 10);
-    if (number > 5) {
-      setNum("すごいですね");
-    } else {
-      setNum("残念です");
-    }
+    setNum(num + 1);
+  };
+
+  const ttt = () => {
+    setFaceShowFlag(!faceShowFlag);
   };
   const aaa = {
     color: "red",
@@ -22,6 +23,12 @@ const App = () => {
     border: "1px solid #aaa",
     textDecoration: "line-through"
   };
+
+  if (num % 3 === 0) {
+    faceShowFlag || setFaceShowFlag(true);
+  } else {
+    faceShowFlag && setFaceShowFlag(false);
+  }
 
   return (
     <>
@@ -38,8 +45,10 @@ const App = () => {
       </ColorfullMessage>
       <ColorfullMessage color="pink">吹越礼子</ColorfullMessage>
       <button onClick={countUp}>ボタン</button>
+      <br />
+      <button onClick={ttt}>ON/OFF</button>
       <p>{num}</p>
-      <p>(^^)/</p>
+      {faceShowFlag && <p>(^^)/</p>}
     </>
   );
 };
